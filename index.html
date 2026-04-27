@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BYOB JTBD Prototype</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">🐇</div>
+        <div>
+          <div class="eyebrow">Memrise</div>
+          <h1>BYOB JTBD Prototype</h1>
+        </div>
+      </div>
+      <p class="muted">A GitHub Pages mockup for turning a JTBD interview transcript into a product-useful synthesis.</p>
+
+      <div class="panel compact">
+        <div class="eyebrow">Prototype flow</div>
+        <ol>
+          <li>Paste or load transcript</li>
+          <li>Apply JTBD analysis contract</li>
+          <li>Review jobs, triggers, blockers, and interview gaps</li>
+          <li>Share a Slack-ready summary</li>
+        </ol>
+      </div>
+
+      <div class="panel compact">
+        <div class="eyebrow">Prompt in use</div>
+        <p>Uses the updated Bob Moesta-style prompt with:</p>
+        <ul>
+          <li>All JTBDs in “When I… / I want to… / so I can… / without…” format</li>
+          <li>Strongest job</li>
+          <li>Social + emotional triggers</li>
+          <li>Memrise helps / blockers</li>
+          <li>Interview question improvements</li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="main">
+      <section class="hero card">
+        <div>
+          <div class="eyebrow">Interview</div>
+          <h2>Learn Vocabulary — Participant A</h2>
+          <p class="muted">Transcript loaded from Google Docs via Maton + Lizzie’s connection. This page shows the kind of decision-ready synthesis BYOB could publish automatically.</p>
+        </div>
+        <div class="hero-actions">
+          <button id="showSummary" class="button primary">Summary view</button>
+          <button id="showTranscript" class="button">Transcript view</button>
+        </div>
+      </section>
+
+      <section id="summaryView" class="view active">
+        <div class="grid two">
+          <article class="card emphasis">
+            <div class="eyebrow">Strongest JTBD</div>
+            <h3>Belong and function confidently in France / Europe</h3>
+            <p class="job">When I travel to France or imagine living in Europe, I want to understand and speak French in real situations, so I can participate in everyday life and feel part of the community, without constantly needing people to slow down or switch to English.</p>
+            <p class="muted">Why this looks strongest: it connects her aspiration, identity, travel behaviour, and desired real-world progress most clearly.</p>
+          </article>
+
+          <article class="card">
+            <div class="eyebrow">Top product signal</div>
+            <h3>Flexibility beats forced progression</h3>
+            <p>The sharpest comparative win vs Duolingo is not “learning languages” in general — it’s giving the learner control over <em>how</em> they practice when confidence and available time vary.</p>
+            <div class="chips">
+              <span>speech practice</span>
+              <span>native-speaker video</span>
+              <span>lower-pressure conversation</span>
+              <span>repeat-on-demand</span>
+            </div>
+          </article>
+        </div>
+
+        <section class="stack">
+          <div class="section-title">
+            <h3>Jobs to be done</h3>
+            <p class="muted">Evidence-first phrasing, compressed for product discussion.</p>
+          </div>
+          <div class="cards jobs" id="jobs"></div>
+        </section>
+
+        <div class="grid two">
+          <section class="card">
+            <div class="section-title"><h3>What Memrise helped with</h3></div>
+            <ul id="helps"></ul>
+          </section>
+          <section class="card">
+            <div class="section-title"><h3>What blocked progress</h3></div>
+            <ul id="blockers"></ul>
+          </section>
+        </div>
+
+        <div class="grid two">
+          <section class="card">
+            <div class="section-title"><h3>Triggers</h3></div>
+            <div id="triggers"></div>
+          </section>
+          <section class="card">
+            <div class="section-title"><h3>Interview improvements</h3></div>
+            <ul id="improvements"></ul>
+          </section>
+        </div>
+
+        <section class="card">
+          <div class="section-title"><h3>Slack-ready summary</h3></div>
+          <pre id="slackSummary"></pre>
+        </section>
+      </section>
+
+      <section id="transcriptView" class="view">
+        <article class="card transcript-card">
+          <div class="section-title">
+            <h3>Transcript excerpt</h3>
+            <p class="muted">Full transcript is bundled in the prototype. This excerpt shows the evidence behind the synthesis.</p>
+          </div>
+          <pre id="transcriptText"></pre>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
