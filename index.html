@@ -3,129 +3,161 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>BYOB JTBD Prototype</title>
+  <title>BYOB – Practice Until I'm Ready</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="shell">
-    <aside class="sidebar">
-      <div class="brand">
-        <div class="brand-mark">🐇</div>
-        <div>
-          <div class="eyebrow">Memrise</div>
-          <h1>BYOB JTBD Prototype</h1>
-        </div>
-      </div>
-      <p class="muted">A GitHub Pages mockup for turning a JTBD interview transcript into a product-useful synthesis.</p>
+  <main class="page">
+    <section class="intro">
+      <p class="eyebrow">Memrise / BYOB prototype</p>
+      <h1>High-fidelity mobile concept: <span>Practice until I’m ready</span></h1>
+      <p class="lede">A post-lesson checkpoint that reduces premature progression by giving learners explicit control to repeat, target weak spots, or continue when they actually feel fluent enough.</p>
 
-      <div class="panel compact">
-        <div class="eyebrow">Prototype flow</div>
-        <ol>
-          <li>Paste or load transcript</li>
-          <li>Apply JTBD analysis contract</li>
-          <li>Review jobs, triggers, blockers, and interview gaps</li>
-          <li>Share a Slack-ready summary</li>
-        </ol>
-      </div>
-
-      <div class="panel compact">
-        <div class="eyebrow">Prompt in use</div>
-        <p>Uses the updated Bob Moesta-style prompt with:</p>
-        <ul>
-          <li>All JTBDs in “When I… / I want to… / so I can… / without…” format</li>
-          <li>Strongest job</li>
-          <li>Social + emotional triggers</li>
-          <li>Memrise helps / blockers</li>
-          <li>Interview question improvements</li>
-        </ul>
-      </div>
-    </aside>
-
-    <main class="main">
-      <section class="hero card">
-        <div>
-          <div class="eyebrow">Interview</div>
-          <h2>Learn Vocabulary — Participant A</h2>
-          <p class="muted">Transcript loaded from Google Docs via Maton + Lizzie’s connection. This page shows the kind of decision-ready synthesis BYOB could publish automatically.</p>
-        </div>
-        <div class="hero-actions">
-          <button id="showSummary" class="button primary">Summary view</button>
-          <button id="showTranscript" class="button">Transcript view</button>
-        </div>
-      </section>
-
-      <section id="summaryView" class="view active">
-        <div class="grid two">
-          <article class="card emphasis">
-            <div class="eyebrow">Strongest JTBD</div>
-            <h3>Belong and function confidently in France / Europe</h3>
-            <p class="job">When I travel to France or imagine living in Europe, I want to understand and speak French in real situations, so I can participate in everyday life and feel part of the community, without constantly needing people to slow down or switch to English.</p>
-            <p class="muted">Why this looks strongest: it connects her aspiration, identity, travel behaviour, and desired real-world progress most clearly.</p>
-          </article>
-
-          <article class="card">
-            <div class="eyebrow">Top product signal</div>
-            <h3>Flexibility beats forced progression</h3>
-            <p>The sharpest comparative win vs Duolingo is not “learning languages” in general — it’s giving the learner control over <em>how</em> they practice when confidence and available time vary.</p>
-            <div class="chips">
-              <span>speech practice</span>
-              <span>native-speaker video</span>
-              <span>lower-pressure conversation</span>
-              <span>repeat-on-demand</span>
-            </div>
-          </article>
-        </div>
-
-        <section class="stack">
-          <div class="section-title">
-            <h3>Jobs to be done</h3>
-            <p class="muted">Evidence-first phrasing, compressed for product discussion.</p>
-          </div>
-          <div class="cards jobs" id="jobs"></div>
-        </section>
-
-        <div class="grid two">
-          <section class="card">
-            <div class="section-title"><h3>What Memrise helped with</h3></div>
-            <ul id="helps"></ul>
-          </section>
-          <section class="card">
-            <div class="section-title"><h3>What blocked progress</h3></div>
-            <ul id="blockers"></ul>
-          </section>
-        </div>
-
-        <div class="grid two">
-          <section class="card">
-            <div class="section-title"><h3>Triggers</h3></div>
-            <div id="triggers"></div>
-          </section>
-          <section class="card">
-            <div class="section-title"><h3>Interview improvements</h3></div>
-            <ul id="improvements"></ul>
-          </section>
-        </div>
-
-        <section class="card">
-          <div class="section-title"><h3>Slack-ready summary</h3></div>
-          <pre id="slackSummary"></pre>
-        </section>
-      </section>
-
-      <section id="transcriptView" class="view">
-        <article class="card transcript-card">
-          <div class="section-title">
-            <h3>Transcript excerpt</h3>
-            <p class="muted">Full transcript is bundled in the prototype. This excerpt shows the evidence behind the synthesis.</p>
-          </div>
-          <pre id="transcriptText"></pre>
+      <div class="insight-grid">
+        <article class="insight-card">
+          <p class="label">Biggest blocker</p>
+          <h2>The app moves on before the learner feels ready.</h2>
+          <p>That creates fragile progress. The user wants confidence, not just completion.</p>
         </article>
-      </section>
-    </main>
-  </div>
+        <article class="insight-card accent">
+          <p class="label">UX improvement</p>
+          <h2>Add a deliberate checkpoint after lesson completion.</h2>
+          <ul>
+            <li>Repeat lesson</li>
+            <li>Practice difficult words</li>
+            <li>Continue to next lesson</li>
+            <li>Optional auto-advance preference</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="prototype-area">
+      <div class="phone-shell">
+        <div class="phone-notch"></div>
+        <div class="phone-screen">
+          <header class="topbar">
+            <button class="ghost-icon" aria-label="Back">←</button>
+            <div class="lesson-meta">
+              <p>French • Unit 4</p>
+              <strong>Ordering at a café</strong>
+            </div>
+            <button class="ghost-icon" aria-label="More">⋯</button>
+          </header>
+
+          <section class="celebration-card">
+            <div class="celebration-copy">
+              <p class="micro">Lesson complete</p>
+              <h2>Nice — you finished this one.</h2>
+              <p>Want to lock it in before moving on?</p>
+            </div>
+            <div class="celebration-badge">
+              <span>84%</span>
+              <small>readiness</small>
+            </div>
+          </section>
+
+          <section class="confidence-panel">
+            <div class="panel-head">
+              <div>
+                <p class="micro">Your progress</p>
+                <h3>Strong recall, weaker speaking confidence</h3>
+              </div>
+              <span class="status-pill">Needs one more pass</span>
+            </div>
+
+            <div class="score-grid">
+              <div class="score-card">
+                <span>Pronunciation</span>
+                <strong>78%</strong>
+                <div class="meter"><i style="width:78%"></i></div>
+              </div>
+              <div class="score-card">
+                <span>Listening</span>
+                <strong>88%</strong>
+                <div class="meter"><i style="width:88%"></i></div>
+              </div>
+              <div class="score-card">
+                <span>Recall</span>
+                <strong>91%</strong>
+                <div class="meter"><i style="width:91%"></i></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="focus-panel">
+            <div class="panel-head stacky">
+              <div>
+                <p class="micro">Practice focus</p>
+                <h3>Difficult words to tighten up</h3>
+              </div>
+              <p class="helper">Stay here until this feels fluent.</p>
+            </div>
+
+            <div class="word-list">
+              <article class="word-row">
+                <div>
+                  <strong>l’addition</strong>
+                  <p>“the bill”</p>
+                </div>
+                <span class="weak-pill">Still shaky</span>
+              </article>
+              <article class="word-row">
+                <div>
+                  <strong>je voudrais</strong>
+                  <p>Pronunciation needs another rep</p>
+                </div>
+                <span class="weak-pill">Retry audio</span>
+              </article>
+              <article class="word-row">
+                <div>
+                  <strong>une table</strong>
+                  <p>Good recall, slower speaking pace</p>
+                </div>
+                <span class="weak-pill soft">Almost there</span>
+              </article>
+            </div>
+          </section>
+
+          <section class="actions-panel">
+            <button class="action secondary">Repeat lesson</button>
+            <button class="action tertiary">Practice difficult words</button>
+            <button class="action primary">Continue to next lesson</button>
+          </section>
+
+          <section class="preference-row">
+            <div>
+              <p class="toggle-title">Auto-advance when ready</p>
+              <p class="toggle-sub">Off — ask me before moving on</p>
+            </div>
+            <button id="toggleAuto" class="toggle off" aria-pressed="false">
+              <span></span>
+            </button>
+          </section>
+        </div>
+      </div>
+
+      <aside class="spec-panel">
+        <p class="eyebrow">Design intent</p>
+        <h3>Why this concept is stronger than a generic completion screen</h3>
+        <ul>
+          <li><strong>Reframes success:</strong> readiness, not just completion.</li>
+          <li><strong>Supports hesitant speakers:</strong> lets them repeat safely before progressing.</li>
+          <li><strong>Makes weakness actionable:</strong> identifies exactly what to practice next.</li>
+          <li><strong>Preserves momentum:</strong> users can still continue with one tap.</li>
+          <li><strong>Creates a product lever:</strong> auto-advance can be personalized later.</li>
+        </ul>
+
+        <div class="next-test">
+          <p class="label">Suggested MVP test</p>
+          <p>Show this checkpoint only when speaking confidence or pronunciation drops below threshold, then measure repeat usage, lesson completion, and 7-day return rate.</p>
+        </div>
+      </aside>
+    </section>
+  </main>
 
   <script src="app.js"></script>
 </body>
