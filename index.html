@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>BYOB – Practice Until I'm Ready</title>
+  <title>BYOB – Speak With Confidence</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=framefix1" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=speakingconfidence1" />
 </head>
 <body>
   <main class="stage">
@@ -28,7 +28,7 @@
           <header class="topbar">
             <button class="icon-button" aria-label="Back">←</button>
             <div class="topbar-copy">
-              <p>French • Unit 4</p>
+              <p>French • Speak mode</p>
               <strong>Ordering at a café</strong>
             </div>
             <button class="icon-button" aria-label="More">⋯</button>
@@ -36,14 +36,14 @@
 
           <section class="hero-card">
             <div class="hero-copy">
-              <p class="eyebrow">Lesson complete</p>
-              <h1>Practice until I’m ready</h1>
-              <p class="subcopy">You completed the lesson. Want to lock it in before moving on?</p>
+              <p class="eyebrow">After the lesson</p>
+              <h1>You’ve seen it. Now say it like you mean it.</h1>
+              <p class="subcopy">A short speaking loop that turns recognition into real-world confidence before you move on.</p>
             </div>
             <div class="readiness-ring">
               <div>
-                <strong>84%</strong>
-                <span>ready</span>
+                <strong>72%</strong>
+                <span>ready to speak</span>
               </div>
             </div>
           </section>
@@ -52,78 +52,114 @@
             <div class="summary-header">
               <div>
                 <p class="eyebrow soft">Confidence check</p>
-                <h2>Strong recall, weaker speaking confidence</h2>
+                <h2>You understand the phrases. Saying them out loud still feels shaky.</h2>
               </div>
-              <span class="badge warn">One more pass</span>
+              <span class="badge warn">Needs speaking reps</span>
             </div>
 
             <div class="score-list">
               <div class="score-row">
-                <div class="score-labels"><span>Pronunciation</span><strong>78%</strong></div>
-                <div class="meter"><i style="width:78%"></i></div>
+                <div class="score-labels"><span>Understood native audio</span><strong>92%</strong></div>
+                <div class="meter"><i style="width:92%"></i></div>
               </div>
               <div class="score-row">
-                <div class="score-labels"><span>Listening</span><strong>88%</strong></div>
-                <div class="meter"><i style="width:88%"></i></div>
+                <div class="score-labels"><span>Said clearly enough</span><strong>67%</strong></div>
+                <div class="meter yellow"><i style="width:67%"></i></div>
               </div>
               <div class="score-row">
-                <div class="score-labels"><span>Recall</span><strong>91%</strong></div>
-                <div class="meter"><i style="width:91%"></i></div>
+                <div class="score-labels"><span>Used in a full reply</span><strong>58%</strong></div>
+                <div class="meter purple"><i style="width:58%"></i></div>
               </div>
             </div>
+          </section>
+
+          <section class="practice-card">
+            <div class="section-head stacked">
+              <div>
+                <p class="eyebrow soft">1 minute confidence loop</p>
+                <h3>Hear it → say it → use it</h3>
+              </div>
+              <p class="helper helper-left">Small, safe reps before a real-world moment.</p>
+            </div>
+
+            <article class="coach-card">
+              <div class="coach-head">
+                <span class="pill active">Native clip</span>
+                <span class="tiny-meta">2.8s</span>
+              </div>
+              <strong>« Je voudrais un café et l’addition, s’il vous plaît. »</strong>
+              <p>Listen once at natural speed, then answer in your own voice.</p>
+              <div class="button-row">
+                <button class="mini-btn dark">▶ Play native audio</button>
+                <button class="mini-btn">🐢 Slower</button>
+              </div>
+            </article>
+
+            <article class="coach-card response-card">
+              <div class="coach-head">
+                <span class="pill speak">Your turn</span>
+                <span class="tiny-meta">Friendly feedback on</span>
+              </div>
+              <strong>Say the whole line back naturally.</strong>
+              <p id="feedbackCopy">Good rhythm. Clean up <em>l’addition</em> once more and you’re probably café-ready.</p>
+              <div class="button-row">
+                <button id="recordBtn" class="mini-btn record">● Hold to speak</button>
+                <button class="mini-btn">↺ Hear my attempt</button>
+              </div>
+            </article>
+
+            <article class="scenario-card">
+              <div class="scenario-copy">
+                <p class="eyebrow soft">Real moment</p>
+                <h4>The waiter comes over. What do you say?</h4>
+                <p>Respond without seeing the full sentence first. You can peek if you freeze.</p>
+              </div>
+              <button id="peekBtn" class="peek-btn" aria-expanded="false">Peek support</button>
+              <div id="peekPanel" class="peek-panel hidden">
+                <p><strong>Soft support:</strong> Start with <em>Je voudrais…</em> and finish with what you want.</p>
+              </div>
+            </article>
           </section>
 
           <section class="focus-card">
             <div class="section-head">
               <div>
-                <p class="eyebrow soft">Targeted practice</p>
-                <h3>Difficult words</h3>
+                <p class="eyebrow soft">Why you’re not ready yet</p>
+                <h3>One phrase still breaks under pressure</h3>
               </div>
-              <p class="helper">Stay here until this feels fluent.</p>
-            </div>
-
-            <div class="chip-row">
-              <span class="pill active">3 to repeat</span>
-              <span class="pill">2 almost there</span>
+              <p class="helper">Fix the wobble, not the whole lesson.</p>
             </div>
 
             <div class="word-list">
               <article class="word-item">
                 <div>
                   <strong>l’addition</strong>
-                  <p>The bill</p>
+                  <p>You hesitate before the ending. Try one slower rep, then normal speed.</p>
                 </div>
-                <span class="tag danger">Shaky</span>
+                <span class="tag danger">Main blocker</span>
               </article>
               <article class="word-item">
                 <div>
                   <strong>je voudrais</strong>
-                  <p>Needs another pronunciation rep</p>
+                  <p>Meaning is solid. Confidence drops when you say it as one phrase.</p>
                 </div>
-                <span class="tag">Retry audio</span>
-              </article>
-              <article class="word-item">
-                <div>
-                  <strong>une table</strong>
-                  <p>Slow but mostly correct</p>
-                </div>
-                <span class="tag soft">Almost there</span>
+                <span class="tag">Say smoothly</span>
               </article>
             </div>
           </section>
 
           <section class="actions-card">
-            <button class="cta secondary">Repeat lesson</button>
-            <button class="cta ghost">Practice difficult words</button>
-            <button class="cta primary">Continue to next lesson</button>
+            <button class="cta secondary">Do one more confidence loop</button>
+            <button class="cta ghost">Practice only my weak phrase</button>
+            <button class="cta primary">I’m ready for the next real-life scene</button>
           </section>
 
           <section class="setting-row">
             <div>
-              <p class="setting-title">Auto-advance when ready</p>
-              <p class="setting-sub">Off — ask me before moving on</p>
+              <p class="setting-title toggle-title">Coach me before I advance</p>
+              <p class="setting-sub toggle-sub">On — hold me here until speaking confidence is high enough</p>
             </div>
-            <button id="toggleAuto" class="toggle off" aria-pressed="false">
+            <button id="toggleAuto" class="toggle on" aria-pressed="true">
               <span></span>
             </button>
           </section>
@@ -133,10 +169,10 @@
 
     <section class="caption-panel">
       <p class="caption-kicker">Prototype rationale</p>
-      <p class="caption-text">This version treats the concept as an actual mobile screen, not a presentation page. The core change is a post-lesson checkpoint that optimizes for readiness instead of forced progression.</p>
+      <p class="caption-text">This concept reframes “practice” as a quick confidence-building speaking coach: native audio, low-stakes voice attempt, gentle feedback, then a realistic prompt that proves readiness on mobile.</p>
     </section>
   </main>
 
-  <script src="app.js?v=framefix1"></script>
+  <script src="app.js?v=speakingconfidence1"></script>
 </body>
 </html>
