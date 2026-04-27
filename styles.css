@@ -35,9 +35,9 @@ body, button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 22px;
-  padding: 32px 16px 40px;
+  justify-content: flex-start;
+  gap: 18px;
+  padding: 24px 16px 32px;
 }
 .phone-wrap {
   position: relative;
@@ -50,8 +50,8 @@ body, button {
   filter: blur(30px);
 }
 .phone-shell {
-  width: min(100vw - 40px, 340px);
-  height: min(78vh, 720px);
+  width: min(100vw - 40px, 360px);
+  height: 640px;
   padding: 10px;
   border-radius: 38px;
   background: linear-gradient(180deg, #20232d 0%, #090b11 100%);
@@ -76,7 +76,17 @@ body, button {
   -webkit-overflow-scrolling: touch;
   padding: 14px 14px 18px;
   background: linear-gradient(180deg, var(--bg2) 0%, #f7f1e8 100%);
-  scrollbar-width: none;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(42,127,255,.35) transparent;
+}
+
+.screen::-webkit-scrollbar {
+  width: 6px;
+}
+
+.screen::-webkit-scrollbar-thumb {
+  background: rgba(42,127,255,.35);
+  border-radius: 999px;
 }
 
 .screen::-webkit-scrollbar {
@@ -306,7 +316,7 @@ body, button {
   transform: translateX(24px);
 }
 .caption-panel {
-  width: min(100vw - 32px, 390px);
+  width: min(100vw - 32px, 360px);
   text-align: center;
   color: #5e6676;
 }
