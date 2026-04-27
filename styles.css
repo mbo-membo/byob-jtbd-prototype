@@ -25,6 +25,11 @@ body {
     radial-gradient(circle at top right, #ece8ff 0%, transparent 20%),
     linear-gradient(180deg, var(--bg) 0%, #ede5d7 100%);
 }
+
+body, button {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
 .stage {
   min-height: 100vh;
   display: flex;
@@ -46,6 +51,7 @@ body {
 }
 .phone-shell {
   width: min(100vw - 32px, 390px);
+  height: 868px;
   padding: 12px;
   border-radius: 42px;
   background: linear-gradient(180deg, #20232d 0%, #090b11 100%);
@@ -63,11 +69,18 @@ body {
   background: #080a0f;
 }
 .screen {
-  min-height: 812px;
+  height: 844px;
   border-radius: 31px;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   padding: 16px 16px 20px;
   background: linear-gradient(180deg, var(--bg2) 0%, #f7f1e8 100%);
+  scrollbar-width: none;
+}
+
+.screen::-webkit-scrollbar {
+  display: none;
 }
 .statusbar,
 .topbar,
