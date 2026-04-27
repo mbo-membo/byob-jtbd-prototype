@@ -7,158 +7,136 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=mobile2" />
 </head>
 <body>
-  <main class="page">
-    <section class="intro">
-      <p class="eyebrow">Memrise / BYOB prototype</p>
-      <h1>High-fidelity mobile concept: <span>Practice until I’m ready</span></h1>
-      <p class="lede">A post-lesson checkpoint that reduces premature progression by giving learners explicit control to repeat, target weak spots, or continue when they actually feel fluent enough.</p>
-
-      <div class="insight-grid">
-        <article class="insight-card">
-          <p class="label">Biggest blocker</p>
-          <h2>The app moves on before the learner feels ready.</h2>
-          <p>That creates fragile progress. The user wants confidence, not just completion.</p>
-        </article>
-        <article class="insight-card accent">
-          <p class="label">UX improvement</p>
-          <h2>Add a deliberate checkpoint after lesson completion.</h2>
-          <ul>
-            <li>Repeat lesson</li>
-            <li>Practice difficult words</li>
-            <li>Continue to next lesson</li>
-            <li>Optional auto-advance preference</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <section class="prototype-area">
-      <div class="phone-shell">
+  <main class="stage">
+    <div class="phone-wrap">
+      <div class="device-shadow"></div>
+      <section class="phone-shell" aria-label="Mobile UI prototype">
         <div class="phone-notch"></div>
-        <div class="phone-screen">
+        <div class="screen">
+          <header class="statusbar">
+            <span>9:41</span>
+            <div class="status-icons">
+              <span>◔</span>
+              <span>◉</span>
+              <span>▰</span>
+            </div>
+          </header>
+
           <header class="topbar">
-            <button class="ghost-icon" aria-label="Back">←</button>
-            <div class="lesson-meta">
+            <button class="icon-button" aria-label="Back">←</button>
+            <div class="topbar-copy">
               <p>French • Unit 4</p>
               <strong>Ordering at a café</strong>
             </div>
-            <button class="ghost-icon" aria-label="More">⋯</button>
+            <button class="icon-button" aria-label="More">⋯</button>
           </header>
 
-          <section class="celebration-card">
-            <div class="celebration-copy">
-              <p class="micro">Lesson complete</p>
-              <h2>Nice — you finished this one.</h2>
-              <p>Want to lock it in before moving on?</p>
+          <section class="hero-card">
+            <div class="hero-copy">
+              <p class="eyebrow">Lesson complete</p>
+              <h1>Practice until I’m ready</h1>
+              <p class="subcopy">You completed the lesson. Want to lock it in before moving on?</p>
             </div>
-            <div class="celebration-badge">
-              <span>84%</span>
-              <small>readiness</small>
+            <div class="readiness-ring">
+              <div>
+                <strong>84%</strong>
+                <span>ready</span>
+              </div>
             </div>
           </section>
 
-          <section class="confidence-panel">
-            <div class="panel-head">
+          <section class="summary-card">
+            <div class="summary-header">
               <div>
-                <p class="micro">Your progress</p>
-                <h3>Strong recall, weaker speaking confidence</h3>
+                <p class="eyebrow soft">Confidence check</p>
+                <h2>Strong recall, weaker speaking confidence</h2>
               </div>
-              <span class="status-pill">Needs one more pass</span>
+              <span class="badge warn">One more pass</span>
             </div>
 
-            <div class="score-grid">
-              <div class="score-card">
-                <span>Pronunciation</span>
-                <strong>78%</strong>
+            <div class="score-list">
+              <div class="score-row">
+                <div class="score-labels"><span>Pronunciation</span><strong>78%</strong></div>
                 <div class="meter"><i style="width:78%"></i></div>
               </div>
-              <div class="score-card">
-                <span>Listening</span>
-                <strong>88%</strong>
+              <div class="score-row">
+                <div class="score-labels"><span>Listening</span><strong>88%</strong></div>
                 <div class="meter"><i style="width:88%"></i></div>
               </div>
-              <div class="score-card">
-                <span>Recall</span>
-                <strong>91%</strong>
+              <div class="score-row">
+                <div class="score-labels"><span>Recall</span><strong>91%</strong></div>
                 <div class="meter"><i style="width:91%"></i></div>
               </div>
             </div>
           </section>
 
-          <section class="focus-panel">
-            <div class="panel-head stacky">
+          <section class="focus-card">
+            <div class="section-head">
               <div>
-                <p class="micro">Practice focus</p>
-                <h3>Difficult words to tighten up</h3>
+                <p class="eyebrow soft">Targeted practice</p>
+                <h3>Difficult words</h3>
               </div>
               <p class="helper">Stay here until this feels fluent.</p>
             </div>
 
+            <div class="chip-row">
+              <span class="pill active">3 to repeat</span>
+              <span class="pill">2 almost there</span>
+            </div>
+
             <div class="word-list">
-              <article class="word-row">
+              <article class="word-item">
                 <div>
                   <strong>l’addition</strong>
-                  <p>“the bill”</p>
+                  <p>The bill</p>
                 </div>
-                <span class="weak-pill">Still shaky</span>
+                <span class="tag danger">Shaky</span>
               </article>
-              <article class="word-row">
+              <article class="word-item">
                 <div>
                   <strong>je voudrais</strong>
-                  <p>Pronunciation needs another rep</p>
+                  <p>Needs another pronunciation rep</p>
                 </div>
-                <span class="weak-pill">Retry audio</span>
+                <span class="tag">Retry audio</span>
               </article>
-              <article class="word-row">
+              <article class="word-item">
                 <div>
                   <strong>une table</strong>
-                  <p>Good recall, slower speaking pace</p>
+                  <p>Slow but mostly correct</p>
                 </div>
-                <span class="weak-pill soft">Almost there</span>
+                <span class="tag soft">Almost there</span>
               </article>
             </div>
           </section>
 
-          <section class="actions-panel">
-            <button class="action secondary">Repeat lesson</button>
-            <button class="action tertiary">Practice difficult words</button>
-            <button class="action primary">Continue to next lesson</button>
+          <section class="actions-card">
+            <button class="cta secondary">Repeat lesson</button>
+            <button class="cta ghost">Practice difficult words</button>
+            <button class="cta primary">Continue to next lesson</button>
           </section>
 
-          <section class="preference-row">
+          <section class="setting-row">
             <div>
-              <p class="toggle-title">Auto-advance when ready</p>
-              <p class="toggle-sub">Off — ask me before moving on</p>
+              <p class="setting-title">Auto-advance when ready</p>
+              <p class="setting-sub">Off — ask me before moving on</p>
             </div>
             <button id="toggleAuto" class="toggle off" aria-pressed="false">
               <span></span>
             </button>
           </section>
         </div>
-      </div>
+      </section>
+    </div>
 
-      <aside class="spec-panel">
-        <p class="eyebrow">Design intent</p>
-        <h3>Why this concept is stronger than a generic completion screen</h3>
-        <ul>
-          <li><strong>Reframes success:</strong> readiness, not just completion.</li>
-          <li><strong>Supports hesitant speakers:</strong> lets them repeat safely before progressing.</li>
-          <li><strong>Makes weakness actionable:</strong> identifies exactly what to practice next.</li>
-          <li><strong>Preserves momentum:</strong> users can still continue with one tap.</li>
-          <li><strong>Creates a product lever:</strong> auto-advance can be personalized later.</li>
-        </ul>
-
-        <div class="next-test">
-          <p class="label">Suggested MVP test</p>
-          <p>Show this checkpoint only when speaking confidence or pronunciation drops below threshold, then measure repeat usage, lesson completion, and 7-day return rate.</p>
-        </div>
-      </aside>
+    <section class="caption-panel">
+      <p class="caption-kicker">Prototype rationale</p>
+      <p class="caption-text">This version treats the concept as an actual mobile screen, not a presentation page. The core change is a post-lesson checkpoint that optimizes for readiness instead of forced progression.</p>
     </section>
   </main>
 
-  <script src="app.js"></script>
+  <script src="app.js?v=mobile2"></script>
 </body>
 </html>
